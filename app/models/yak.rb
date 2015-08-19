@@ -1,4 +1,4 @@
-class Tweet < ActiveRecord::Base
+class Yak < ActiveRecord::Base
 #   #username, message
 #   attr_accessor :username, :message
 #   def initialize(username, message)
