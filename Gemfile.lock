@@ -73,6 +73,9 @@ DEPENDENCIES
   sinatra-activerecord
   sqlite3
   tux
+<<<<<<< HEAD
 
 BUNDLED WITH
    1.10.5
+=======
+>>>>>>> e047af631a52401cef25e289464895298e0a9643
