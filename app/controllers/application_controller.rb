@@ -10,18 +10,18 @@ class ApplicationController < Sinatra::Base
   set :views, "app/views"
 end
   get "/" do
-    @all_yaks = Tweet.all
+    @all_yaks = Yak.all
     
     erb :index
   end
   post "/new_yak" do
-    @yak = Tweet.new({:nam => params[:nam], :message => params[:message]})
+    @yak = Yak.new({:name => params[:name], :message => params[:message]})
     @yak.save
-    @all_yaks = Tweet.all
+    @all_yaks = Yak.all
     erb :index
   end
   post '/delete_yak' do
-    Tweet.find_by id: params = nil
+    Yak.find_by id: params = nil
 
   end
   
