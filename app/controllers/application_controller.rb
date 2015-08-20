@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   post "/new_yak" do
-    @yak = Yak.new({:name => params[:name], :message => params[:message]})
+    @yak = Yak.new({:user => params[:user], :message => params[:message]})
     @yak.save
     @all_yaks = Yak.all
     erb :index
