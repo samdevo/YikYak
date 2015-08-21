@@ -4,4 +4,5 @@ body {
   color: white;
   font-family: 'Arvo';
   background-image: url(http://www.cssauthor.com/wp-content/uploads/2013/07/Blurred-Background_111.jpg); 
+  background-size: cover;
 }
