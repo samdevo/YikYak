@@ -13,7 +13,6 @@ class ApplicationController < Sinatra::Base
     erb :signin
   end
   post '/signin' do
-    @signins += 1
     session[:location] = params[:location]
     redirect '/index'
   end
