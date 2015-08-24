@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
   get "/" do
     @all_yaks = Yak.all
     
-    erb :index
+    erb :signin
   end
   post "/new_yak" do
     @yak = Yak.new({:user => params[:user], :message => params[:message]})
