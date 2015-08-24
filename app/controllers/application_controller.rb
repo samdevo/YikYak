@@ -8,7 +8,12 @@ class ApplicationController < Sinatra::Base
   end
   get "/" do
     @all_yaks = Yak.all
+<<<<<<< HEAD
     erb :index
+=======
+    
+    erb :signin
+>>>>>>> 728666281347571645ca7d6cd3efce4ce6674a79
   end
   post "/new_yak" do
     @yak = Yak.new({:location => params[:location], :message => params[:message]})

@@ -7,5 +7,6 @@ body {
   background-size: cover;
 }
 .yikyak{
-  
+       position: relative;
+    left: -900px;
 }
