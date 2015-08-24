@@ -5,27 +5,19 @@
   <meta charset="UTF-8">
   <title>YikYak</title>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
- </head>
+ </head> 
  <body>
-<<<<<<< HEAD
     <h1 class="text-center"> Welcome to Yik Yak </h1>
    <div align="right" class="logo">
-     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Yik_Yak_green_logo.svg/768px-Yik_Yak_green_logo.svg.png">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Yik_Yak_green_logo.svg/768px-Yik_Yak_green_logo.svg.png">  
    </div>
-   <form action="/new_yak" method="POST">
-     <input type="text" name="name" value="Anonymous">
-     <input type="text" name="message" placeholder="your message here...">
-     <select name="location">
-       <option value="NYC">NYC</option>
-       <option value="Boston">Boston</option>
-       <option value="Los_Angeles">Los Angeles</option>
-     </select>
-=======
-    <h1 class="text-left"> Welcome to Yik Yak </h1>
+   <% @yaks.each do |yak| %>
+   <li><%=yak.username %> says: <%=yak.message %></li>
+     <% end %>   
+     <form action='/new_yak' method="POST">
  
-     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Yik_Yak_green_logo.svg/768px-Yik_Yak_green_logo.svg.png" align="left"><br>
-
-   <br><br><br><br><br><br><br><br><br><br><br><form action="/new_yak" method="POST">
+   
+   <form action="/new_yak" method="POST">
    <input type="text" name="name" value="Anonymous">
    <input type="text" name="message" placeholder="your message here...">
    
@@ -34,8 +26,7 @@
   <option>Boston</option>
   <option>Los Angeles</option>
 </select>
->>>>>>> 728666281347571645ca7d6cd3efce4ce6674a79
      <input type="submit" value="Submit">
-   </form>
+     </form>
  </body>
 </html>
