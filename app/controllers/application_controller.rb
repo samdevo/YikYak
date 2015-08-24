@@ -13,7 +13,8 @@ class ApplicationController < Sinatra::Base
     erb :signin
   end
   post '/signin' do
-    session[:user_id] = 
+    @signins += 1
+    session[:location] = params[:location]
     redirect '/index'
   end
   get "/index" do
@@ -21,7 +22,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   post "/new_yak" do
-    @yak = Yak.new({:user => params[:user], :message => params[:message]})
+    @yak = Yak.new({:location_id => session[:location], :message => params[:message]})
     @yak.save
     @yaks = Yak.all
     erb :index
