@@ -1,5 +1,6 @@
 require "./config/environment"
 require "./app/models/yak"
+require "./app/models/location"
 
 class ApplicationController < Sinatra::Base
   configure do
@@ -13,7 +14,7 @@ class ApplicationController < Sinatra::Base
     erb :signin
   end
   post '/signin' do
-    session[:location] = params[:location]
+    session[:location_id] = params[:location]
     redirect '/index'
   end
   get "/index" do
@@ -21,7 +22,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   post "/new_yak" do
-    @yak = Yak.new({:location_id => session[:location], :message => params[:message]})
+    @yak = Yak.new({:location_id => session[:location_id], :message => params[:message]})
     @yak.save
     @yaks = Yak.all
     erb :index

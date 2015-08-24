@@ -11,14 +11,18 @@
    <div align="right" class="logo">
      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Yik_Yak_green_logo.svg/768px-Yik_Yak_green_logo.svg.png">  
    </div>
-   <% @yaks.each do |yak| %>
-   <li><%=yak.username %> says: <%=yak.message %></li>
+   <% @yaks.where(location_id: session[:location_id]).each do |yak| %>
+   <ul><%=yak.message%></ul>
      <% end %>  
    <form action="/new_yak" method="POST">
+<!--      <input type="text" name="name" value="Anonymous"> -->
      <input type="text" name="message" placeholder="your message here...">
+<!--        <select>
+         <option value="1">NYC</option>
+         <option value="2">Boston</option>
+         <option value="3">Los Angeles</option>
+        </select> -->
      <input type="submit" value="Submit">
-     
-     
    </form>
  </body>
 </html>

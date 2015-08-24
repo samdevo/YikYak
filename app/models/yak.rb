@@ -8,5 +8,5 @@ class Yak < ActiveRecord::Base
 #   t.string :Message
 #   t.interger :location_id
 
-  belongs_to :Locations
+  belongs_to :location
 end

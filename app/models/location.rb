@@ -1,4 +1,4 @@
-class Locations < ActiveRecord::Base
+class Location < ActiveRecord::Base
   #t.sting = Slocation
-  has_many :Yaks
+  has_many :yaks
 end
