@@ -11,11 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820183541) do
+ActiveRecord::Schema.define(version: 20150821141218) do
+
+  create_table "locations", force: :cascade do |t|
+    t.string "location"
+  end
 
   create_table "yaks", force: :cascade do |t|
-    t.string "user"
-    t.string "message"
+    t.integer "location_id"
+    t.string  "message"
   end
 
 end
