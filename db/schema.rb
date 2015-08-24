@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150821141218) do
 
   create_table "locations", force: :cascade do |t|
@@ -20,6 +21,21 @@ ActiveRecord::Schema.define(version: 20150821141218) do
   create_table "yaks", force: :cascade do |t|
     t.integer "location_id"
     t.string  "message"
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20150819174748) do
+
+  create_table "tweets", force: :cascade do |t|
+    t.string "user"
+    t.string "status"
+=======
+ActiveRecord::Schema.define(version: 20150820183541) do
+
+  create_table "yaks", force: :cascade do |t|
+    t.string "user"
+    t.string "message"
+>>>>>>> 1ab9c9f232509e557f7d540856b2ae92bf4e841a
+>>>>>>> b58ddcd2aa963dfbf4d9611e13e3da147e4384a5
   end
 
 end

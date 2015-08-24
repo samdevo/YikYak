@@ -5,6 +5,8 @@ class Yak < ActiveRecord::Base
 #     @username = username
 #     @message = message
 #   end
-  
+  t.string :Message
+  t.interger :location_id
 
+  belongs_to :Locations
 end
