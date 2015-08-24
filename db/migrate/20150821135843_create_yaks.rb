@@ -1,7 +1,7 @@
 class CreateYaks < ActiveRecord::Migration
   def up
     create_table :yaks do |t|
-      t.integer :location_id
+      t.integer :location
       t.string :message
     end
   end

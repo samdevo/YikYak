@@ -8,11 +8,10 @@ class ApplicationController < Sinatra::Base
   end
   get "/" do
     @all_yaks = Yak.all
-    
     erb :index
   end
   post "/new_yak" do
-    @yak = Yak.new({:user => params[:user], :message => params[:message]})
+    @yak = Yak.new({:location => params[:location], :message => params[:message]})
     @yak.save
     @all_yaks = Yak.all
     erb :index
@@ -21,6 +20,6 @@ class ApplicationController < Sinatra::Base
 #     Yak.find_by id: params = nil
 
   end
-  
+
 end
 
