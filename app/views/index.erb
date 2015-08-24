@@ -7,34 +7,22 @@
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
  </head> 
  <body>
-<<<<<<< HEAD
-    <h1 class="text-left"> Welcome to Yik Yak </h1>
-=======
     <h1 class="text-center"> Welcome to Yik Yak </h1>
    <div align="right" class="logo">
      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Yik_Yak_green_logo.svg/768px-Yik_Yak_green_logo.svg.png">  
    </div>
    <% @yaks.each do |yak| %>
    <li><%=yak.username %> says: <%=yak.message %></li>
-     <% end %>   
-     <form action='/new_yak' method="POST">
->>>>>>> 389908d05316063d87a6ab575605391b4d80b548
- 
-   
+     <% end %>  
    <form action="/new_yak" method="POST">
-   <input type="text" name="name" value="Anonymous">
-   <input type="text" name="message" placeholder="your message here...">
-   
-<<<<<<< HEAD
-
-=======
-     <select>
-  <option>NYC</option>
-  <option>Boston</option>
-  <option>Los Angeles</option>
-</select>
->>>>>>> 389908d05316063d87a6ab575605391b4d80b548
+     <input type="text" name="name" value="Anonymous">
+     <input type="text" name="message" placeholder="your message here...">
+       <select>
+         <option>NYC</option>
+         <option>Boston</option>
+         <option>Los Angeles</option>
+        </select>
      <input type="submit" value="Submit">
-     </form>
+   </form>
  </body>
 </html>
